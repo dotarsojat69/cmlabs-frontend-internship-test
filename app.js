@@ -91,7 +91,7 @@ $(document).ready(function() {
             .catch(error => console.error('Error:', error));
     }
 
-    // Function to handle routing
+    // Fungsi handle routing
     function handleRoute(page) {
         $('#mobile-menu').addClass('hidden');  // Hide mobile menu after clicking
         switch(page) {
@@ -117,15 +117,15 @@ $(document).ready(function() {
         }
     }
 
-    // Event listeners for navigation
+    // Event listeners untuk navigasi
     $('nav a').on('click', function(e) {
         e.preventDefault();
         const page = $(this).data('page');
         handleRoute(page);
-        window.location.hash = page;  // Update URL hash
+        window.location.hash = page;
     });
 
-    // Event listeners for category and meal items
+    // Event listeners untuk category dan meal items
     $(document).on('click', '.category-item', function() {
         const category = $(this).data('category');
         $('#hero').hide();
@@ -138,7 +138,7 @@ $(document).ready(function() {
         loadMealDetails(id);
     });
 
-    // Handle initial route based on URL hash
+    // Handle initial route
     $(window).on('load', function() {
         const initialPage = window.location.hash.slice(1) || 'home';
         handleRoute(initialPage);
