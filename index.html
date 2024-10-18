@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Recipe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <style>
+        .font-lora { font-family: 'Lora', serif; }
+        .font-roboto-slab { font-family: 'Roboto Slab', serif; }
+    </style>
+</head>
+<body class="bg-white">
+    <nav class="bg-white shadow drop-shadow">
+        <div class="sm:max-w-6xl  mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="font-lora sm:text-2xl text-base font-bold">FoodRecipe</div>
+                <div class="hidden md:flex space-x-6 font-roboto-slab">
+                    <a href="#home" class="hover:text-gray-700" data-page="home">Home</a>
+                    <a href="#foods" class="hover:text-gray-700" data-page="foods">Foods</a>
+                    <a href="#ingredients" class="hover:text-gray-700" data-page="ingredients">Ingredients</a>
+                    <a href="#local-culinary" class="hover:text-gray-700" data-page="local-culinary">Local Culinary</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#home" class="block py-2 px-4 text-sm hover:bg-gray-200" data-page="home">Home</a>
+            <a href="#foods" class="block py-2 px-4 text-sm hover:bg-gray-200" data-page="foods">Foods</a>
+            <a href="#ingredients" class="block py-2 px-4 text-sm hover:bg-gray-200" data-page="ingredients">Ingredients</a>
+            <a href="#local-culinary" class="block py-2 px-4 text-sm hover:bg-gray-200" data-page="local-culinary">Local Culinary</a>
+        </div>
+    </nav>
+
+    <div id="hero" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4 font-lora">You can see all the recipes here</h1>
+            <div class="flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="container mx-auto mt-8 mb-8 px-4">
+        <!-- Content will be dynamically inserted here -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
